@@ -1,5 +1,9 @@
-// http is the module which we will use to host our webservers
+////////////////////////////////////////////////
+// imports
 const http = require("http");
+// http is the module which we will use to host our webservers
+
+////////////////////////////////////////////////
 
 const server = http.createServer(async (req, res) => {
   // req and res are essential to the "createServer method"
@@ -13,7 +17,7 @@ const server = http.createServer(async (req, res) => {
   } else {
     // only triggers when the url path is not found
     // which is anything that isnt root "/" rn
-    res.write("bad request... no no.. 404 not found");
+    res.write("bad request... no no.. 404... not found");
     res.end();
   }
 });
@@ -26,8 +30,8 @@ const server = http.createServer(async (req, res) => {
 //  is not told to display any information,
 //  and so it states "the website is unreachable"
 server.on("connection", (socket) => {
-  // connection states this code will run every-
-  // time a connection is made to the server
+  // "connection" - states this code will run
+  // everytime a connection is made to the server
   console.log("new connection made");
   // connection is very low level and wont be used
   // very often to respond to events...

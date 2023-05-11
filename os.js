@@ -1,5 +1,8 @@
-// imports :)
+////////////////////////////////////////////////
+// imports
 var os = require("os");
+
+////////////////////////////////////////////////
 
 // functions
 const dvcName = () => {
@@ -47,19 +50,14 @@ const dvcType = () => {
   return os.type();
 };
 
+////////////////////////////////////////////////
 // function calls:
 console.log("");
-//
-
 console.log(`Name: ${dvcName()}`);
 console.log(`Architecture: ${dvcType()} ${dvcPlatform()} ${dvcMachine()}`);
 console.log(`Cores: ${dvcCores()}`);
-// console.log(dvcNetwork());
 console.log(`Total Memory: ${dvcTotalMem()} bytes`);
 console.log(`Free Memory: ${dvcFreeMem()} bytes`);
 console.log(`Used Memory: ${dvcUsedMem()} bytes`);
-
-// console.log(dvcNetwork());
-
-//
 console.log("");
+////////////////////////////////////////////////
