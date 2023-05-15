@@ -1,7 +1,8 @@
 ////////////////////////////////////////////////
 // imports
 const http = require("http");
-// http is the module which we will use to host our webservers
+// HTTP -- provides utilities to communicate using
+//        A http server.
 
 ////////////////////////////////////////////////
 
