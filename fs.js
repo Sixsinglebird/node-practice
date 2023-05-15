@@ -5,6 +5,9 @@ const fs = require("fs");
 //      local file system.
 
 ////////////////////////////////////////////////
+// when you run NODE fs -- it will make a file
+//    called hello.txt
+// simply run node fs again to delete it
 
 // this will only activate when there is a file
 // in the current directory called "hello.txt"
