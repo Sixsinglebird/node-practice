@@ -4,15 +4,15 @@ var os = require("os");
 // OS -- provides operating system related utilities
 
 ////////////////////////////////////////////////
-
 // functions
+
+// returns the name of the device
 const dvcName = () => {
-  // returns the name of the device
   return os.hostname();
 };
 
+// returns the type of machine being used
 const dvcMachine = () => {
-  // returns the current machine type of the device
   return os.machine();
 };
 
@@ -21,28 +21,28 @@ const dvcCores = () => {
   return os.availableParallelism();
 };
 
+// returns the amount of free memory on device
 const dvcFreeMem = () => {
-  // returns the amount of free memory on device
   return os.freemem();
 };
 
+// returns the amount of total memory on device
 const dvcTotalMem = () => {
-  // returns the amount of total memory on device
   return os.totalmem();
 };
 
+// returns the amount of used memory on the device
 const dvcUsedMem = () => {
-  // returns the amount of used memory on the device
   return dvcTotalMem() - dvcFreeMem();
 };
 
+// returns the os for which the binaries are compiled
 const dvcPlatform = () => {
-  // returns the os for which the binaries are compiled
   return os.platform();
 };
 
+// returns the os of the device
 const dvcType = () => {
-  // returns the os of the device
   return os.type();
 };
 
@@ -56,4 +56,5 @@ console.log(`Total Memory: ${dvcTotalMem()} bytes`);
 console.log(`Free Memory: ${dvcFreeMem()} bytes`);
 console.log(`Used Memory: ${dvcUsedMem()} bytes`);
 console.log("");
+console.log(dvcNetwork());
 ////////////////////////////////////////////////
