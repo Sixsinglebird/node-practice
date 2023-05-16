@@ -10,27 +10,22 @@ var os = require("os");
 const dvcName = () => {
   return os.hostname();
 };
-
-// returns the type of machine being used
+// returns the current machine type of the device
 const dvcMachine = () => {
   return os.machine();
 };
-
+// returns the number of cores on the device
 const dvcCores = () => {
-  // returns the number of cores on the device
   return os.availableParallelism();
 };
-
 // returns the amount of free memory on device
 const dvcFreeMem = () => {
   return os.freemem();
 };
-
 // returns the amount of total memory on device
 const dvcTotalMem = () => {
   return os.totalmem();
 };
-
 // returns the amount of used memory on the device
 const dvcUsedMem = () => {
   return dvcTotalMem() - dvcFreeMem();
@@ -40,7 +35,6 @@ const dvcUsedMem = () => {
 const dvcPlatform = () => {
   return os.platform();
 };
-
 // returns the os of the device
 const dvcType = () => {
   return os.type();
@@ -56,5 +50,4 @@ console.log(`Total Memory: ${dvcTotalMem()} bytes`);
 console.log(`Free Memory: ${dvcFreeMem()} bytes`);
 console.log(`Used Memory: ${dvcUsedMem()} bytes`);
 console.log("");
-console.log(dvcNetwork());
 ////////////////////////////////////////////////
