@@ -11,11 +11,6 @@ const dvcName = () => {
   return os.hostname();
 };
 
-const dvcNetwork = () => {
-  // returns a list of the devices network interfaces (w/ drivers... i think... anything w/out drivers is ignored).
-  return os.networkInterfaces();
-};
-
 const dvcMachine = () => {
   // returns the current machine type of the device
   return os.machine();
